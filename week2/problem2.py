@@ -4,7 +4,7 @@ import sys
 """
 Notes:
 - see comment in problem0.py on first line of docstring
-- see comment in problem1.py on return value; if the return value is None then we leave out the 'return' from the docstring
+- see comment in problem0.py on return value; if the return value is None then we leave out the 'return' from the docstring
 - Your program has no exit code!
 """
 
