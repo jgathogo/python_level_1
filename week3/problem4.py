@@ -12,6 +12,9 @@ def main():
 
     first_letter = l_sorted[0]
     last_letter = l_sorted[-1]
+    print(l_sorted)
+    print(f"min = {min_l}")
+    print(f"max = {max_l}")
 
     print(f"Minimum and the first number are equal: {min_l == first_letter}\n"
           f"Maximum and the last number are equal: {max_l == last_letter}")

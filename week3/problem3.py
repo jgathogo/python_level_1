@@ -4,6 +4,7 @@ import random
 
 
 def main():
+    # correct
     random_list = list(random.choices(range(5), k=10))
 
     print(f"Number of times each number is present in list: \n"

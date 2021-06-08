@@ -1,6 +1,13 @@
 import os
 import sys
 
+"""
+Notes
+- trivial point: instead of using bulky variable names you can
+use A for the matrix name and a11,a12,... for the element names; 
+intricate variable names are more liable to bugs
+- Nice string formatting!
+"""
 
 def main():
     # hard-code input matrices
@@ -25,6 +32,17 @@ def main():
     m_1_r_0_c_1 = int(input("Row 0, Column 1: "))
     m_1_r_1_c_0 = int(input("Row 1, Column 0: "))
     m_1_r_1_c_1 = int(input("Row 1, Column 1: "))
+    """
+    # For example the above could be simplified to
+    a11 = int(input("a11: "))
+    a12 = int(input("a12: "))
+    a21 = int(input("a21: "))
+    a22 = int(input("a22: "))
+    A = [[a11, a12], [a21, a22]]
+    # Does that look cleaner?
+    # As a programmer, you will spend a lot more time reading code than
+    # writing it
+    """
 
     print("Enter values for Matrix 2: ")
     m_2_r_0_c_0 = int(input("Row 0, Column 0: "))
@@ -44,6 +62,7 @@ def main():
     print(f"Matrix 2: \n"
           f"{m_2[0][0]} {m_2[0][1]}\n{m_2[1][0]} {m_2[1][1]}")
 
+    # This is not easy on the eyes and is very hard to double check
     prod_r0_c0 = (m_1_r_0_c_0 * m_2_r_0_c_0) + (m_1_r_0_c_1 * m_2_r_1_c_0)
     prod_r0_c1 = (m_1_r_0_c_0 * m_2_r_0_c_1) + (m_1_r_0_c_1 * m_2_r_1_c_1)
     prod_r1_c0 = (m_1_r_1_c_0 * m_2_r_0_c_0) + (m_1_r_1_c_1 * m_2_r_1_c_0)
