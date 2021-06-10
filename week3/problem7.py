@@ -12,7 +12,7 @@ def main():
         print(f"y: {y}")
 
     except ZeroDivisionError as ze:
-        print(f"Error: Division by zero not allowed(x = 1)")
+        print(f"Error when x = 1: {ze}")
 
     return os.EX_OK
 
