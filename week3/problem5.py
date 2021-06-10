@@ -4,54 +4,54 @@ import sys
 
 def main():
     print("Enter values for Matrix 1: ")
-    m1_r00 = int(input("Row 0, Column 0: "))
-    m1_r01 = int(input("Row 0, Column 1: "))
-    m1_r02 = int(input("Row 0, Column 2: "))
-    m1_r10 = int(input("Row 1, Column 0: "))
-    m1_r11 = int(input("Row 1, Column 1: "))
-    m1_r12 = int(input("Row 1, Column 2: "))
-    m1_r20 = int(input("Row 2, Column 0: "))
-    m1_r21 = int(input("Row 2, Column 1: "))
-    m1_r22 = int(input("Row 2, Column 2: "))
+    a11 = int(input("Row 1, Column 1: "))
+    a12 = int(input("Row 1, Column 2: "))
+    a13 = int(input("Row 1, Column 3: "))
+    a21 = int(input("Row 2, Column 1: "))
+    a22 = int(input("Row 2, Column 2: "))
+    a23 = int(input("Row 2, Column 3: "))
+    a31 = int(input("Row 3, Column 1: "))
+    a32 = int(input("Row 3, Column 2: "))
+    a33 = int(input("Row 3, Column 3: "))
 
     print("Enter values for Matrix 2: ")
-    m2_r00 = int(input("Row 0, Column 0: "))
-    m2_r01 = int(input("Row 0, Column 1: "))
-    m2_r02 = int(input("Row 0, Column 2: "))
-    m2_r10 = int(input("Row 1, Column 0: "))
-    m2_r11 = int(input("Row 1, Column 1: "))
-    m2_r12 = int(input("Row 1, Column 2: "))
-    m2_r20 = int(input("Row 2, Column 0: "))
-    m2_r21 = int(input("Row 2, Column 1: "))
-    m2_r22 = int(input("Row 2, Column 2: "))
+    b11 = int(input("Row 1, Column 1: "))
+    b12 = int(input("Row 1, Column 2: "))
+    b13 = int(input("Row 1, Column 3: "))
+    b21 = int(input("Row 2, Column 1: "))
+    b22 = int(input("Row 2, Column 2: "))
+    b23 = int(input("Row 2, Column 3: "))
+    b31 = int(input("Row 3, Column 1: "))
+    b32 = int(input("Row 3, Column 2: "))
+    b33 = int(input("Row 3, Column 3: "))
 
-    m1 = [[m1_r00, m1_r01, m1_r02],
-          [m1_r10, m1_r11, m1_r12],
-          [m1_r20, m1_r21, m1_r22]
-          ]
+    a = [[a11, a12, a13],
+         [a21, a22, a23],
+         [a31, a32, a33]
+         ]
 
-    m2 = [[m2_r00, m2_r01, m2_r02],
-          [m2_r10, m2_r11, m2_r12],
-          [m2_r20, m2_r21, m2_r22]
-          ]
+    b = [[b11, b12, b13],
+         [b21, b22, b23],
+         [b31, b32, b33]
+         ]
 
     # product matrix variables
-    m_prod_r00 = m1[0][0] * m2[0][0] + m1[0][1] * m2[1][0] + m1[0][2] * m2[2][0]
-    m_prod_r01 = m1[0][0] * m2[0][1] + m1[0][1] * m2[1][1] + m1[0][2] * m2[2][1]
-    m_prod_r02 = m1[0][0] * m2[0][2] + m1[0][1] * m2[1][2] + m1[0][2] * m2[2][2]
+    c11 = a[0][0] * b[0][0] + a[0][1] * b[1][0] + a[0][2] * b[2][0]
+    c12 = a[0][0] * b[0][1] + a[0][1] * b[1][1] + a[0][2] * b[2][1]
+    c13 = a[0][0] * b[0][2] + a[0][1] * b[1][2] + a[0][2] * b[2][2]
 
-    m_prod_r10 = m1[1][0] * m2[0][0] + m1[1][1] * m2[1][0] + m1[1][2] * m2[2][0]
-    m_prod_r11 = m1[1][0] * m2[0][1] + m1[1][1] * m2[1][1] + m1[1][2] * m2[2][1]
-    m_prod_r12 = m1[1][0] * m2[0][2] + m1[1][1] * m2[1][2] + m1[1][2] * m2[2][2]
+    c21 = a[1][0] * b[0][0] + a[1][1] * b[1][0] + a[1][2] * b[2][0]
+    c22 = a[1][0] * b[0][1] + a[1][1] * b[1][1] + a[1][2] * b[2][1]
+    c23 = a[1][0] * b[0][2] + a[1][1] * b[1][2] + a[1][2] * b[2][2]
 
-    m_prod_r20 = m1[2][0] * m2[0][0] + m1[2][1] * m2[1][0] + m1[2][2] * m2[2][0]
-    m_prod_r21 = m1[2][0] * m2[0][1] + m1[2][1] * m2[1][1] + m1[2][2] * m2[2][1]
-    m_prod_r22 = m1[2][0] * m2[0][2] + m1[2][1] * m2[1][2] + m1[2][2] * m2[2][2]
+    c31 = a[2][0] * b[0][0] + a[2][1] * b[1][0] + a[2][2] * b[2][0]
+    c32 = a[2][0] * b[0][1] + a[2][1] * b[1][1] + a[2][2] * b[2][1]
+    c33 = a[2][0] * b[0][2] + a[2][1] * b[1][2] + a[2][2] * b[2][2]
 
     print(f"Resulting Matrix:\n\n"
-          f"{m_prod_r00} {m_prod_r01} {m_prod_r02}\n"
-          f"{m_prod_r10} {m_prod_r11} {m_prod_r12}\n"
-          f"{m_prod_r20} {m_prod_r21} {m_prod_r22}")
+          f"{c11} {c12} {c13}\n"
+          f"{c21} {c22} {c23}\n"
+          f"{c31} {c32} {c33}")
 
     return os.EX_OK
 
