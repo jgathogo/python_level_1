@@ -9,29 +9,30 @@ intricate variable names are more liable to bugs
 - Nice string formatting!
 """
 
+
 def main():
     # hard-code input matrices
-    m_1 = [[1, 2],
-           [3, 4]]
+    x = [[1, 2],
+         [3, 4]]
 
-    m_2 = [[5, 6],
-           [7, 8]]
+    y = [[5, 6],
+         [7, 8]]
 
     # compute values of the elements of the product from input matrices
-    prod_r0_c0 = (m_1[0][0] * m_2[0][0]) + (m_1[0][1] * m_2[1][0])
-    prod_r0_c1 = (m_1[0][0] * m_2[0][1]) + (m_1[0][1] * m_2[1][1])
-    prod_r1_c0 = (m_1[1][0] * m_2[0][0]) + (m_1[1][1] * m_2[1][0])
-    prod_r1_c1 = (m_1[1][0] * m_2[0][1]) + (m_1[1][1] * m_2[1][1])
+    z11 = (x[0][0] * y[0][0]) + (x[0][1] * y[1][0])
+    z12 = (x[0][0] * y[0][1]) + (x[0][1] * y[1][1])
+    z21 = (x[1][0] * y[0][0]) + (x[1][1] * y[1][0])
+    z22 = (x[1][0] * y[0][1]) + (x[1][1] * y[1][1])
 
     # print out resulting matrix
-    print(f"{prod_r0_c0} {prod_r0_c1}\n{prod_r1_c0} {prod_r1_c1}")
+    print(f"{z11} {z12}\n{z21} {z22}")
 
     # modify program that user can input any matrix
     print("Enter values for Matrix 1: ")
-    m_1_r_0_c_0 = int(input("Row 0, Column 0: "))
-    m_1_r_0_c_1 = int(input("Row 0, Column 1: "))
-    m_1_r_1_c_0 = int(input("Row 1, Column 0: "))
-    m_1_r_1_c_1 = int(input("Row 1, Column 1: "))
+    a11 = int(input("Row 1, Column 1: "))
+    a12 = int(input("Row 1, Column 2: "))
+    a21 = int(input("Row 2, Column 1: "))
+    a22 = int(input("Row 2, Column 2: "))
     """
     # For example the above could be simplified to
     a11 = int(input("a11: "))
@@ -45,36 +46,35 @@ def main():
     """
 
     print("Enter values for Matrix 2: ")
-    m_2_r_0_c_0 = int(input("Row 0, Column 0: "))
-    m_2_r_0_c_1 = int(input("Row 0, Column 1: "))
-    m_2_r_1_c_0 = int(input("Row 1, Column 0: "))
-    m_2_r_1_c_1 = int(input("Row 1, Column 1: "))
+    b11 = int(input("Row 1, Column 1: "))
+    b12 = int(input("Row 1, Column 2: "))
+    b21 = int(input("Row 2, Column 1: "))
+    b22 = int(input("Row 2, Column 2: "))
 
-    m_1 = [[m_1_r_0_c_0, m_1_r_0_c_1],
-           [m_1_r_1_c_0, m_1_r_1_c_1]]
+    a = [[a11, a12],
+         [a21, a22]]
 
     print(f"Matrix 1: \n"
-          f"{m_1[0][0]} {m_1[0][1]}\n{m_1[1][0]} {m_1[1][1]}")
+          f"{a[0][0]} {a[0][1]}\n{a[1][0]} {a[1][1]}")
 
-    m_2 = [[m_2_r_0_c_0, m_2_r_0_c_1],
-           [m_2_r_1_c_0, m_2_r_1_c_1]]
+    b = [[b11, b12],
+         [b21, b22]]
 
     print(f"Matrix 2: \n"
-          f"{m_2[0][0]} {m_2[0][1]}\n{m_2[1][0]} {m_2[1][1]}")
+          f"{b[0][0]} {b[0][1]}\n{b[1][0]} {b[1][1]}")
 
     # This is not easy on the eyes and is very hard to double check
-    prod_r0_c0 = (m_1_r_0_c_0 * m_2_r_0_c_0) + (m_1_r_0_c_1 * m_2_r_1_c_0)
-    prod_r0_c1 = (m_1_r_0_c_0 * m_2_r_0_c_1) + (m_1_r_0_c_1 * m_2_r_1_c_1)
-    prod_r1_c0 = (m_1_r_1_c_0 * m_2_r_0_c_0) + (m_1_r_1_c_1 * m_2_r_1_c_0)
-    prod_r1_c1 = (m_1_r_1_c_0 * m_2_r_0_c_1) + (m_1_r_1_c_1 * m_2_r_1_c_1)
+    c11 = (a11 * b11) + (a12 * b21)
+    c12 = (a11 * b12) + (a12 * b22)
+    c21 = (a21 * b11) + (a22 * b21)
+    c22 = (a21 * b12) + (a22 * b22)
 
-    m_product = [[prod_r0_c0, prod_r0_c1],
-                 [prod_r1_c0, prod_r1_c1]]
+    c = [[c11, c12],
+         [c21, c22]]
 
     # print out resulting matrix
     print(f"Product of Matrix 1 and 2 is: \n"
-          f"{m_product[0][0]} {m_product[0][1]}\n{m_product[1][0]} {m_product[1][1]}")
-    # print(f"{prod_r0_c0} {prod_r0_c1}\n{prod_r1_c0} {prod_r1_c1}")
+          f"{c[0][0]} {c[0][1]}\n{c[1][0]} {c[1][1]}")
 
     return os.EX_OK
 
