@@ -5,9 +5,10 @@ problem/score
 3/10
 4/10
 5/9
-6/-
+6/9
 7/-
 8/-
 9/-
-Total/48
+Total/68
 # make the variables easier on the eyes to get max scores for 3 and 6
+# remove the repeated variables to get max scores for 6

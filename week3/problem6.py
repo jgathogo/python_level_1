@@ -2,6 +2,26 @@ import os
 import sys
 import math
 
+"""
+Notes:
+- Excellent job! I'm glad that you figured out the correct equations to compute
+the internal angles. I see that this has also forced you to read up on 
+Python math library. This is exactly the kind of activity by which someone 
+grows, not just attending class but solving problems in increasing difficulty. 
+- Remember to run 'clean' often to make sure that the correct number of spaces
+between functions etc. This habit will come in handy when we start writing classes
+since quite often we want to fold code and make sure we have enough space
+between methods.
+-  I see you have 'reused' x, y, and z. Try and avoid that. It's innocent acts like
+these that lead to very hard to track down bugs.
+- I hope it's also becoming apparent how linear code quickly begins to clutter your module.
+Once we get into functions our code can get a whole lot cleaner. But for now this 
+is perfectly OK because we are concentrating on other constructs.
+- Trivial point: in terms of presentation of floating point numbers, one can use
+round() to clean things up. Typically, 4 decimal places is sufficient.
+- Read the scoring notes in scores.txt 
+"""
+
 
 def main():
     print("Enter values for point A")
