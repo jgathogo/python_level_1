@@ -1,14 +1,15 @@
 problem/score
 0/10
 1/10
-2/9
+2/10
 3/10
 4/10
-5/9
-6/9
-7/-
-8/-
-9/-
-Total/68
-# make the variables easier on the eyes to get max scores for 3 and 6
-# remove the repeated variables to get max scores for 6
+5/10
+6/9.5
+7/9
+8/7
+9/10
+Total/95.5
+# problem6.py can still be improved
+# problem7.py needs some changes for full score
+# problem8.py needs some changes for full score
