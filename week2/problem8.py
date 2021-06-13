@@ -13,6 +13,36 @@ fractions i.e. x = -b/2/a +/- math.sqrt(discriminant)/2/a
     x1 = complex(-b/2/a, math.sqrt(-discriminant)/2/a)
     x2 = complex(-b/2/a, -math.sqrt(-discriminant)/2/a)
 I've leave it to your to experience the joy of solving it
+
+A complex number is made up of two parts: real and imaginary. Python allows us 
+to represent complex numbers by passing the real and imaginary parts as arguments 
+to the complex() class. For example,
+
+complex(1, 2) 
+
+returns the complex number (1+2j): 1 is real and 2j is imaginary.
+
+Now, when we are trying to solve (I will only handle the case with +; the one with - is the same) 
+
+x = (-b + math.sqrt(b**2 - 4*a*c)/(2*a)
+
+or
+    -b + math.sqrt(b**2 - 4*a*c)
+x = ----------------------------.
+              2*a
+              
+We can write this as 
+
+    ⎡   b ⎤ ⎡math.sqrt(b**2 - 4*a*c)⎤
+x = ⎢- ---⎢+⎢-----------------------⎢
+    ⎣  2*a⎦ ⎣      2*a              ⎦
+    
+Now the right has two values: the one first one is always real but the second one 
+becomes imaginary when the discriminant is negative. Please see the slide titled
+Complex Math in week3 slides.
+
+This will give you enough to work on to solve the problem. I'd like you to experience
+the joy of solving it for yourself.
 """
 
 
