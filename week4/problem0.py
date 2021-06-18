@@ -1,6 +1,18 @@
 import os
 import sys
 
+"""
+Notes/Questions:
+- Excellent solution! You only forgot to print out d!
+- How may we simplify the following using what we have learned so far? 
+
+    d[i] = d[i] + 1
+    
+- Please make you code more compact; fewer blank lines
+- If the user does not follow instructions the program should halt. 
+How would you implement this?
+"""
+
 
 def main():
     text = input("Enter a ten character word: ")
@@ -17,6 +29,7 @@ def main():
         else:
             d[i] = d[i] + 1
 
+    print(d)
     return os.EX_OK
 
 
