@@ -1,6 +1,12 @@
 import os
 import sys
 
+"""
+Notes:
+- Excellent! You can improve by explaining with comments what the 
+annotated lines do
+"""
+
 
 def main():
     # War and Peace by Leo Tolstoy
@@ -10,6 +16,7 @@ def main():
 
     d = {}
     for word in text.split(" "):
+        # very good!
         word = word.lower().replace(',', '').replace('.', '').replace('“', '')
         print(word)
         if word not in d:
@@ -18,6 +25,7 @@ def main():
             d[word] += 1
 
     sorted_d = {}
+    # todo: write a brief description of what this does
     sorted_keys = sorted(d, key=d.get, reverse=True)[0:10]
     for w in sorted_keys:
         sorted_d[w] = d[w]
