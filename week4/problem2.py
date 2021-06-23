@@ -26,6 +26,9 @@ def main():
 
     sorted_d = {}
     # todo: write a brief description of what this does
+    # Sorted returns the first ten ([0:10]) sorted list of keys from d. Keys are sorted by their values
+    # key=d.get - passes the value of the keys in d. These serve as the key for the sorted function
+    # reverse=True - so that values are sorted in descending order
     sorted_keys = sorted(d, key=d.get, reverse=True)[0:10]
     for w in sorted_keys:
         sorted_d[w] = d[w]
