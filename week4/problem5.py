@@ -1,6 +1,17 @@
 import os
 import sys
 
+"""
+Notes:
+- Great job construction the dictionary! I'll later show you how to do this.
+- In solving part (b) think as follows
+    consider a colour like #F64A8A
+    suppose the use chooses 'r'
+    we know that the red channel is non-zero (F6)
+    so we should iterate all keys (colours) and find those 
+    with indexes 1 and 2 not equal to zero; these colours have red
+"""
+
 
 def main():
     colours = """Absolute Zero 	#0048BA 
@@ -344,6 +355,7 @@ def main():
     # Convert data to a dictionary
     colours_l = colours.replace(" \n", '').replace("\t", "").split("    ")
     colours_d = {}
+    # very good!
     for i in colours_l:
         colours_d[i[-7:]] = i[0:-7]
 
@@ -368,6 +380,7 @@ def main():
     c_name = name_d[c]
     print(f"The following have non-zero values in the {c_name} channel")
     for colour in colours_d:
+        # todo: compare each position independently
         if colour[c_pos:c_pos + 2] != '00':
             print(f"{colour} - {colours_d[colour]}")
     return os.EX_OK

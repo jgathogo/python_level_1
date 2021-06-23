@@ -1,6 +1,13 @@
 import os
 import sys
 
+"""
+Notes:
+- Very good string presentation! I can see that you spend a good deal of time on this
+- The total doesn't seem to be right. Give it another shot. 
+- Start with a simpler version, solve it on paper before you code, ...
+"""
+
 
 def main():
     catalogue = {
