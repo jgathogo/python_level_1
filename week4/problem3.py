@@ -5,8 +5,8 @@ import sys
 
 """
 Notes:
-- In my experience, I sense you are currently at an import juncture in your
-learning: you are reaching the limits of your memory. This is evident 
+- In my experience, I sense you are currently at an important juncture in your
+learning: you are reaching the limits of your mental memory. This is evident 
 because your code is hard to follow meaning that you are trying to juggle
 everything in your head, and that is very hard. In fact, it is also
 very stressful and can interfere with your joy of learning. I propose following
