@@ -28,38 +28,32 @@ def main():
             'macbook pro': 1799,
         }
     }
-    # Display user catalogue
-    for item_d in catalogue:
-        product_d = catalogue[item_d]
-        print(f"\nItem - {item_d}\n"
-              f"Categories and quantities for the {item_d} include:\n"
-              f"++++++++++++++++")
-        for category_d in product_d:
-            print(f"{category_d} - {product_d[category_d]}")
 
-    # Ask user which item they would like to purchase
+    # Display catalogue
+    for product, models in catalogue.items():
+        print(f"\nProduct - {product}\n"
+              f"Categories and quantities for the {product} include:\n"
+              f"{'*' * 50}")
+        for model, quantity in models.items():
+            print(f"\t{model} - {quantity}")
+
+    # Ask user for input
     cart = {}
-    for item in catalogue:
-        # print(item)
-        # print(catalogue[item])
-        product = catalogue[item]
-        print(f"Here are the {item} products: {product}")
-        for category in product:
-            print({f"Would you like to buy the {item}, {category} model?. Type Y for Yes and N for No: "})
+    for product, models in catalogue.items():
+        for model, quantity in models.items():
+            print({f"Would you like to buy the {product}, {model} model?. Type Y for Yes and N for No: "})
             buy = input("Y/N: ")
             if buy == "Y" or buy == "y":
-                cart[category] = int(input("Enter quantity: "))
+                cart[model] = int(input("Enter quantity: "))
 
     # Present final invoice
-    total = 0
     if len(cart) != 0:
         print(f"Your invoice\n"
               f"===================\n "
-              f"You have chosen {len(cart)} items")
+              f"You have chosen {len(cart)} item(s)")
         for item_chosen in cart:
-            print(f"Item: {item_chosen}, Quantity: {cart[item_chosen]}")
-            total += cart[item_chosen]
-        print(f"Total price is KES {total}")
+            print(f"\tItem: {item_chosen}, Quantity: {cart[item_chosen]}")
+        print(f"Total price is KES {sum(cart.values())}")
     else:
         print("\nYou have selected no items. Try again next time")
 

@@ -359,6 +359,8 @@ def main():
     for i in colours_l:
         colours_d[i[-7:]] = i[0:-7]
 
+    # print(colours_d)
+
     c = input("Input r, g or b: ")
 
     name_d = {'r': 'Red',
@@ -368,21 +370,19 @@ def main():
     if c not in name_d:
         sys.exit("Invalid character. Enter values r g or b")
 
-    # This did not work, I don't know why.
-    # if c != "r" or c != "g" or c != "b":
-    #     sys.exit("Invalid character. Enter values r g or b")
-
     pos_d = {'r': 1,
              'g': 3,
              'b': 5}
 
     c_pos = pos_d[c]
     c_name = name_d[c]
+    # print(c_pos, c_pos + 1)
     print(f"The following have non-zero values in the {c_name} channel")
-    for colour in colours_d:
+    for hex_c, colour in colours_d.items():
         # todo: compare each position independently
-        if colour[c_pos:c_pos + 2] != '00':
-            print(f"{colour} - {colours_d[colour]}")
+        # compare position 1 and 2 with 0
+        if hex_c[c_pos] != '0' and hex_c[c_pos + 1] != '0':
+            print(f"{hex_c} - {colour}")
     return os.EX_OK
 
 

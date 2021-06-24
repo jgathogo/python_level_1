@@ -33,36 +33,25 @@ no one can tell you exactly how but once you know how you just know.
 
 def main():
     # Create 2 dictionaries each with random assortment of letters
-    values_d1 = random.choices(range(100), k=10)
-    keys_d1 = random.choices(string.ascii_lowercase, k=10)
+    values_d1 = random.choices(range(100), k=2)
+    keys_d1 = random.choices(string.ascii_lowercase, k=2)
     d1 = dict(zip(keys_d1, values_d1))
 
     values_d2 = random.choices(range(100), k=10)
     keys_d2 = random.choices(string.ascii_lowercase, k=10)
     d2 = dict(zip(keys_d2, values_d2))
-    print(d1)
-    print(d2)
 
     dsum = {}
-    for w in d1:  # no need for iter()
-        if w in d2:
-            if w in dsum:
-                dsum[w] += d1[w] + d2[w]
 
-            else:
-                dsum[w] = d1[w] + d2[w]
+    for k, v in d1.items():
+        if k in d2:
+            dsum[k] = d1[k] + d2[k]
         else:
-            dsum[w] = d1[w]
-    # fixme: I don't think the sums are right
-    for w in d2:
-        if w in d1:
-            if w in dsum:
-                dsum[w] += d1[w] + d2[w]
+            dsum[k] = v
 
-            else:
-                dsum[w] = d1[w] + d2[w]
-        else:
-            dsum[w] = d2[w]
+    for k, v in d2.items():
+        if k not in dsum:
+            dsum[k] = v
 
     print(dsum)
     return os.EX_OK
