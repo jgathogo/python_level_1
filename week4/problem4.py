@@ -44,16 +44,21 @@ def main():
             print({f"Would you like to buy the {product}, {model} model?. Type Y for Yes and N for No: "})
             buy = input("Y/N: ")
             if buy == "Y" or buy == "y":
-                cart[model] = int(input("Enter quantity: "))
+                cart[(product, model)] = int(input("Enter quantity: "))
 
     # Present final invoice
+    invoice = {}
     if len(cart) != 0:
         print(f"Your invoice\n"
               f"===================\n "
               f"You have chosen {len(cart)} item(s)")
-        for item_chosen in cart:
-            print(f"\tItem: {item_chosen}, Quantity: {cart[item_chosen]}")
-        print(f"Total price is KES {sum(cart.values())}")
+        for key, quantity in cart.items():
+            product = key[0]
+            model = key[1]
+            price = catalogue[product][model]
+            print(f"\tItem: {product} {model} Quantity: {quantity}, Price: {price} - Total: {quantity * price}")
+            invoice[product, model] = quantity * price
+        print(f"Total cost is KES {sum(invoice.values())}")
     else:
         print("\nYou have selected no items. Try again next time")
 
