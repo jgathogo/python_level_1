@@ -9,7 +9,7 @@ problem/score
 7/4
 8/10
 9/10
-Total/48
+Total/85
 # problem0.py needs some changes for full score
 # problem1.py has several redundant variables
 # problem2.py a few annotations needed
