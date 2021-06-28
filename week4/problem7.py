@@ -1,6 +1,26 @@
 import os
-import sys
 import random
+import sys
+
+"""
+Notes:
+- In ordinary counting we use numbers 1-6 not 0-5. As a programmer your job is
+to hide the complexity of your code from the user. The user should never have
+to be forced to think along your lines. 
+- This is a substantially less trivial problem than I thought. It strongly depends
+on a good understanding of the problem before attempt to solve it. Keep in mind
+the following:
+1. there is a winning number
+2. there is the play
+3. numbers are matched in sequence
+4. there are multiple sequences (see below for a detailed breakdown)
+5. the winnings depend on the size of the match sequence 
+(the smaller the sequence the less the winning, the larger the sequence the higher the winning)
+
+Therefore, you need to figure out how to:
+- generate subsequences of the winning numbers
+- compare the play to the subsequences to determine the win
+"""
 
 
 def main():
@@ -35,11 +55,23 @@ def main():
     play_list = []
     for set_num, set_values in d.items():
         for play in set_values:
+            # fixme: here you are comparing individual values with the winning numbers;
+            #  consider that to win the player also needs to match numbers in sequence;
+            #  for example: if the winning numbers are [1, 2, 3, 4, 5, 6]
+            #  then you can win with each of
+            #  match of 1: 1-6, but also
+            #  match of 2: 1-2, 2-3, 3-4, 4-5, 5-6,
+            #  match of 3: 1-2-3, ..., 4-5-6,
+            #  match of 4: 1-2-3-4, ..., 3-4-5-6,
+            #  match of 5: 1-2-3-4-5, 2-3-4-5-6
+            #  match of 5 plus bonus: 1-2-3-4-5 and the bonus ball
+            #  jackpot (match of all six): 1-2-3-4-5-6
             if play in win:
                 if play not in play_list:
                     play_list.append(play)
         counter_d[set_num] = play_list
         play_list = []
+    print(play_list)
 
     # Choose the play list with the largest number of matching numbers.
     d_sort = {}

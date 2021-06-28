@@ -3,13 +3,15 @@ problem/score
 1/8
 2/9
 3/6
-4/4
-5/6
-6/-
-7/-
-8/-
-9/-
-Total/43
+4/9
+5/9
+6/10
+7/4
+8/10
+9/10
+Total/48
 # problem0.py needs some changes for full score
 # problem1.py has several redundant variables
 # problem2.py a few annotations needed
+# problem7.py needs a better understanding of the problem ;-)
+#

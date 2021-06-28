@@ -1,6 +1,12 @@
 import os
-import sys
 import string
+import sys
+
+"""
+Notes:
+- Thumbs up!
+- You probably ran out of time but consider using text alignment. It is a godsend for users.
+"""
 
 
 def main():
@@ -182,7 +188,7 @@ def main():
 
     freq_d = {}
     non_common = []
-
+    # good!
     for word in text_l:
         if word in common_words:
             if word in freq_d:
