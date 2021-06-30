@@ -123,14 +123,6 @@ def main():
             five_l.append(word)
     print(f"List of words generated: {five_l}\n"
           f"Number of loops required to generate list: {counter}")
-
-    # five_l = []
-    # while len(five_l) < 5:
-
-    # for i in 2:
-    #     s = random.choices(string.ascii_lowercase)
-    #     three += s
-
     return os.EX_OK
 
 
