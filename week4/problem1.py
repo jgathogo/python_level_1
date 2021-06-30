@@ -11,24 +11,24 @@ same characters in 'residues' to get a 'true' DNA sequence
 
 def main():
     # Random sequence string of 100 base pairs
-    alphabet = list(string.ascii_uppercase) # redundant
     residues = ['A', 'C', 'G', 'T']
-    # I've replaced alphabet with residues
-    keys = random.choices(residues, k=50)
+    pairs_l = random.choices(residues, k=50)
     # fixme: 'values' is redundant; it is not?
-    values = random.choices(residues, k=50)
+    # values = random.choices(residues, k=50)
     # fixme: no need for zip()
-    pairs = list(zip(keys, values))
+    print(pairs)
+    # pairs = list(zip(keys, values))
     sequence = ''
-    # fixme: no need for iter()
-    for k in iter(pairs):
+    # # fixme: no need for iter()
+    i = 0
+    for k in pairs:
         sequence += k[0] + k[1]
     print(f"Random sequence of {len(sequence)} base pairs\n"
           f"{sequence}\n")
 
     # Print out k-mers
     k_list = [3, 4, 5, 6, 7]
-    # fixme: no need for iter()
+    # # fixme: no need for iter()
     for k in iter(k_list):
         pos = 0
         d = {}
