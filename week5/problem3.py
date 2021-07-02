@@ -1,6 +1,11 @@
 import os
-import sys
 import random
+import sys
+
+"""
+Notes:
+- Great!
+"""
 
 
 def main():

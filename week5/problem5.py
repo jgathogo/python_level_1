@@ -1,7 +1,13 @@
 import os
-import sys
 import random
 import string
+import sys
+
+"""
+Notes:
+- Beautiful!
+- I've added an extra challenge!
+"""
 
 
 def main():
@@ -105,6 +111,7 @@ def main():
                     "instead", "improve", "stuff", "claim"]
 
     # Extract 3 letter words from the list
+    # todo: extra challenge: how would you do this with a list comprehension?
     threes = []
     for word in common_words:
         if len(word) == 3:

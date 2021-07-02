@@ -1,6 +1,13 @@
 import os
-import sys
 import random
+import sys
+
+"""
+Notes:
+- Good job!
+- There is a bug in your translation (b). Use the example provided in the challenge to make
+sure your translated sequence is the same. 
+"""
 
 
 def main():
@@ -22,6 +29,7 @@ def main():
     for d, r in trans_map.items():
         dna = dna.replace(d, r)
     rna = dna.replace('g_temp', 'G')
+    # fixme: is this 'translated' or 'transcribed'?
     print(f"Translated: {rna}")
 
     # Translation
@@ -39,6 +47,7 @@ def main():
 
     trans_sequence = []
     stops = 0
+    # todo: what can you do here to fix the bug?
     for i in range(len(rna)):
         codon = rna[i:i + 3]
         # print(codon)

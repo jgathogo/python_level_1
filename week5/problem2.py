@@ -1,6 +1,11 @@
 import os
-import sys
 import random
+import sys
+
+"""
+Notes:
+- Excellent!
+"""
 
 
 def main():
@@ -20,7 +25,9 @@ def main():
     print(f"Sum of adjoining pairs: ")
     new_l2 = []
     i = 0
+    # notice that since you iterate up to len(l) - 1 you don't need the if statement
     while i < len(l) - 1:
+        # fixme: can be made more compact by removing pos1 and pos2
         pos1 = i
         pos2 = pos1 + 1
         new_l2.append(l[pos1] + l[pos2])

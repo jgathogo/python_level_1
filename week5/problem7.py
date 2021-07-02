@@ -1,6 +1,16 @@
 import os
-import sys
 import random
+import sys
+
+"""
+Notes:
+- Great job!
+- One thing to keep in mind is to be lenient to users: I find it a delightful surprise if 
+the author is forgiving for innocent mistakes. For example, I want to still play even if
+I have caps lock on. How can I do this?
+- Instead of having a separate check to see if the user want to play on why not 
+incorporate it into the choices e.g. type 'x' at any point to exit?
+"""
 
 
 def main():
@@ -21,6 +31,7 @@ def main():
         you = input("Option: ")
         if you not in options:
             print("Run the program again and enter a valid input: ")
+            # fixme: which keyword did we learn about that should be used here?
             sys.exit()
 
         comp = random.choice(options)

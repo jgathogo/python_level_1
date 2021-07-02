@@ -1,6 +1,13 @@
 import os
-import sys
 import random
+import sys
+
+"""
+Notes:
+- Excellent!
+- I would invite you to consider going through these problems again to improve your code
+based on what you have learned from the harder problems. 
+"""
 
 
 def main():
@@ -14,6 +21,7 @@ def main():
 
     l3 = []
     for i in range(len(l1)):
+        # great!
         l3.append(l1[i] + l2[i])
     print(f"Pairwise sums: {l3}")
 
