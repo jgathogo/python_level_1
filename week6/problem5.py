@@ -1,6 +1,12 @@
 import os
 import sys
 
+"""
+Notes:
+- Excellent!
+- Please add a docstring to your function in line with the notes provided.
+"""
+
 
 def repeat_characters(word, num=2):
     rep = ""

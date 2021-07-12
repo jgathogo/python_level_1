@@ -1,6 +1,11 @@
 import os
-import sys
 import random
+import sys
+
+"""
+Note:
+- Good try but this does not double!
+"""
 
 
 def main():

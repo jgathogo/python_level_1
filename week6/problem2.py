@@ -1,6 +1,12 @@
 import os
 import sys
 
+"""
+Notes:
+- Great job! ask the user for input 😄
+- Please add a docstring to your function in line with the notes provided.
+"""
+
 
 def is_palindrome(text):
     return text == text[::-1]
