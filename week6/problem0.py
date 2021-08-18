@@ -12,15 +12,27 @@ Notes:
 """
 
 
-def sum_of_list(x):
+def sum_of_list(num_list, start_at=10):
+    """Sum the numbers in a list
+
+    >>> sum_of_list(list(range(1, 10), start_at=2)
+
+    """
     # fixme: please have another go at this; write your own sum implementation 😉
-    return sum(x)
+    sum_num = 0
+    end_at = len(num_list)
+    for i in range(start_at, end_at):
+        sum_num += num_list[i]
+    return sum_num
 
 
 def main():
-    num_list = list(random.choices(range(1, 30), k=10))
+    # num_list = list(random.choices(range(1, 30), k=10))
+    num_list = [1, 2, 3, 4, 5]
+
     print(f"List of numbers: {num_list}")
     print(f"Sum of numbers: {sum_of_list(num_list)}")
+    print(sum_of_list(list(range(1, 100)), start_at=20))
     return os.EX_OK
 
 
